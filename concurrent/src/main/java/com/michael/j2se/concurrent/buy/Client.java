@@ -12,19 +12,19 @@ public class Client {
 
 	public Client() {
 		this.users = new ArrayList<>();
-		Shop shop = new Shop(9);						
-		this.currentUtil = new UserCurrent(shop, 9);
+		Shop shop = new Shop(19);
+		this.currentUtil = new UserCurrent(shop, 190);
 	}
-	
+
 	public static void main(String[] args) {
-		
+
 		Client client = new Client();
-		client.currentUtil.start();
 		client.currentUtil.isLog(false);
+		client.currentUtil.start();
 		client.users.forEach((u) -> {System.out.println(u == null ? null : u.goods );});
 	}
-	
-	
+
+
 	class UserCurrent extends AbstractCountDownLatch {
 		private Shop shop;
 		public UserCurrent(Shop shop, int threadNumber) {
