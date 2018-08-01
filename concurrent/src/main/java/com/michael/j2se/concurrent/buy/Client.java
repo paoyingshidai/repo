@@ -2,6 +2,7 @@ package com.michael.j2se.concurrent.buy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import com.michael.j2se.test.support.AbstractCountDownLatch;
 
@@ -12,7 +13,7 @@ public class Client {
 
 	public Client() {
 		this.users = new ArrayList<>();
-		Shop shop = new Shop(9);						
+		Shop shop = new Shop(new AtomicInteger(9));						
 		this.currentUtil = new UserCurrent(shop, 9);
 	}
 	
@@ -34,7 +35,9 @@ public class Client {
 		@Override
 		protected void doWork() {
 			 User u = new User(shop);
-			 u.buy();
+			 synchronized (u) {
+				 u.buy();
+			}
 			 users.add(u);
 		}
 	}
