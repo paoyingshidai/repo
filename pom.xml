@@ -69,5 +69,6 @@
 	<modules>
 		<module>concurrent</module>
 		<module>test</module>
-	</modules>
+        <module>lock</module>
+    </modules>
 </project>
