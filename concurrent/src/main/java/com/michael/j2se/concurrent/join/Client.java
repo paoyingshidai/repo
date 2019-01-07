@@ -45,6 +45,7 @@ public class Client {
 
         threads.forEach(th -> {
             try {
+                // 阻塞当前线程
                 th.join();
             } catch (InterruptedException e) {
                 e.printStackTrace();

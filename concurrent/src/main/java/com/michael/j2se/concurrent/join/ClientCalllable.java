@@ -44,6 +44,9 @@ public class ClientCalllable {
             }
         });
 
+        // 记得关闭线程池，否则会程序不会停止
+        executorService.shutdown();
+
         long endTime = System.currentTimeMillis();
         System.out.println(endTime - nowTime);
 
