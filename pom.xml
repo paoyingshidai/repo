@@ -35,6 +35,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>27.0.1-jre</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -70,5 +77,6 @@
 		<module>concurrent</module>
 		<module>test</module>
         <module>lock</module>
-    </modules>
+		<module>guava</module>
+	</modules>
 </project>
