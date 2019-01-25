@@ -1,11 +1,9 @@
 package com.michael.javase.guava.base;
 
 import com.google.common.base.Joiner;
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,11 +15,6 @@ public class JoinerMain {
                 .skipNulls()
                 .join(list);
     }
-
-
-
-
-
 
 
     public static boolean hasText(String s) {
