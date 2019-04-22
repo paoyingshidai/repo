@@ -25,6 +25,53 @@ public class JoinerMain {
         }
     }
 
+
+    public void classLoader() {
+
+        try {
+            Class a = this.getClass().getClassLoader().loadClass("com.michael.javase.guava.base.SplitterMain");
+            Class b = SplitterMain.class.getClassLoader().loadClass("com.michael.javase.guava.base.SplitterMain");
+
+
+
+            System.out.println( a.newInstance().getClass());
+            System.out.println( b.newInstance().getClass());
+
+
+
+
+            if (a.newInstance() instanceof SplitterMain) {
+                System.out.println("相同");
+            } else {
+                System.out.println("不同");
+            }
+
+            if (b.newInstance() instanceof SplitterMain) {
+                System.out.println("相同");
+            } else {
+                System.out.println("不同");
+            }
+
+
+            if (a.newInstance().equals(b.newInstance())) {
+                System.out.println("相同");
+            } else {
+                System.out.println("不同");
+            }
+
+            if (a.newInstance().equals(a.newInstance())) {
+                System.out.println("相同");
+            } else {
+                System.out.println("不同");
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public static void main(String[] args) {
 
         List<String> list = Lists.newArrayList("1", "2", null, "", "3");
@@ -41,6 +88,10 @@ public class JoinerMain {
         String re = Joiner.on("&").withKeyValueSeparator("=").join(ImmutableMap.of("id", "123", "name", "green"));
         System.out.println(re);
 
+
+        JoinerMain m = new JoinerMain();
+
+        m.classLoader();
 
     }
 
