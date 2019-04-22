@@ -78,5 +78,6 @@
 		<module>test</module>
         <module>lock</module>
 		<module>guava</module>
-	</modules>
+        <module>disruptor</module>
+    </modules>
 </project>
