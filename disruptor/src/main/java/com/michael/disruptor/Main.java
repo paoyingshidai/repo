@@ -11,6 +11,9 @@ import java.nio.ByteBuffer;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
+/**
+ * http://ifeve.com/disruptor-getting-started/
+ */
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
