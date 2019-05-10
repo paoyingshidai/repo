@@ -79,5 +79,6 @@
         <module>lock</module>
 		<module>guava</module>
         <module>disruptor</module>
+        <module>thread</module>
     </modules>
 </project>
