@@ -6,5 +6,11 @@
 /logs/
 
 .idea
-j2se.iml
-*/*.iml
+*.iml
+disruptor/src/test/
+disruptor/target/
+guava/target/
+lock/src/test/
+lock/target/
+thread/src/test/
+thread/target/
