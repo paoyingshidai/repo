@@ -3,7 +3,7 @@ package com.michael.j2se.lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 公平锁
+ * 公平锁，实现交替打印 1 - 100
  */
 public class LockFair implements Runnable {
     //创建公平锁
@@ -34,5 +34,8 @@ public class LockFair implements Runnable {
         Thread t2 = new Thread(lockFairTest);
         t1.start();
         t2.start();
+
+//        Thread t3 = new Thread(lockFairTest);
+//        t3.start();
     }
 }
