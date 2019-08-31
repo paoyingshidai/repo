@@ -37,6 +37,8 @@ public class MultiReturn {
             System.out.println(result.toString());
         }
 
+        System.out.println("done");
+
     }
 
 
